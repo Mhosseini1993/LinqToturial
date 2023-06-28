@@ -2,6 +2,7 @@
 using LinqToturial.Filtering;
 using LinqToturial.Grouping;
 using LinqToturial.Joining;
+using LinqToturial.Projection;
 using LinqToturial.Sorting;
 
 #region Filtering
@@ -28,6 +29,11 @@ GroupingTest.UseLookup();
 #region Joining
 JoiningTest.UseJoin();
 JoiningTest.UseGroupJoin();
+#endregion
+
+#region Projection
+ProjectionTest.UseSelect();
+ProjectionTest.UseSelectMany();
 #endregion
 
 Console.ReadLine();

@@ -76,7 +76,11 @@ namespace LinqToturial.MockData
                 }
 
             },
-            new Teacher(){Id = 2,FirstName = "akbar",LastName = "Dehghan",
+            new Teacher()
+            {
+                Id = 2,
+                FirstName = "akbar",
+                LastName = "Dehghan",
                 Educations = new List<Education>()
                 {
                     new Education(){Title = "bachelor"},
