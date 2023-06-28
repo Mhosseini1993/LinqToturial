@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using LinqToturial.Filtering;
+using LinqToturial.Grouping;
 using LinqToturial.Sorting;
 
 #region Filtering
@@ -18,6 +19,10 @@ SortingTest.UserOrderByThenByDesc();
 SortingTest.UseReverse();
 #endregion
 
+#region Grouping
+GroupingTest.UseGroupBy();
+GroupingTest.UseLookup();
+#endregion
 
 
 

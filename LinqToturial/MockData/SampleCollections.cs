@@ -258,5 +258,16 @@ namespace LinqToturial.MockData
                 Console.WriteLine(item);
             }
         }
+        public static void WriteIGrouping<Tkey,T>(IEnumerable<IGrouping<Tkey, T>> values)
+        {
+            foreach (var key in values)
+            {
+                Console.WriteLine($"keys : {key.Key}");
+                foreach (var item in key)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+        }
     }
 }
