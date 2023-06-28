@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using LinqToturial.Filtering;
 using LinqToturial.Grouping;
+using LinqToturial.Joining;
 using LinqToturial.Sorting;
 
 #region Filtering
@@ -24,6 +25,9 @@ GroupingTest.UseGroupBy();
 GroupingTest.UseLookup();
 #endregion
 
-
+#region Joining
+JoiningTest.UseJoin();
+JoiningTest.UseGroupJoin();
+#endregion
 
 Console.ReadLine();
