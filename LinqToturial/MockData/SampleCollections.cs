@@ -251,6 +251,12 @@ namespace LinqToturial.MockData
 
         public static List<int> DigitsWithDuplicate = new List<int>() { 1, 2, 3, 4, 5, 7, 2, 4, 5, 1, 8, 11, 35, 16 };
      
-
+        public static void WriteCollection<T>(IEnumerable<T> collection)
+        {
+            foreach (var item in collection)
+            {
+                Console.WriteLine(item);
+            }
+        }
     }
 }
