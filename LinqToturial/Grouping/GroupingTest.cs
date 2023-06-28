@@ -15,6 +15,8 @@ namespace LinqToturial.Grouping
         /// </summary>
         public static void UseGroupBy()
         {
+
+
             IEnumerable<Mark> marks = SampleCollections.Marks;
             IEnumerable<IGrouping<int, Mark>> groupedMarksByStudentId = marks.GroupBy(c => c.StudentId);
             Console.WriteLine("----------Group Marks by studentId---------");
