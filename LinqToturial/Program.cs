@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using LinqToturial.Aggregation;
 using LinqToturial.Comparer;
 using LinqToturial.Filtering;
 using LinqToturial.Grouping;
@@ -7,7 +8,7 @@ using LinqToturial.Projection;
 using LinqToturial.Quantifier;
 using LinqToturial.Sorting;
 
-QuantifierTest.UseContains();
+
 
 #region Filtering
 FilteringTest.UseWhere();
@@ -44,5 +45,19 @@ ProjectionTest.UseSelectMany();
 ComparerTest.UseEqualityComparer();
 ComparerTest.UseComparer();
 #endregion
+
+#region Quantifier
+QuantifierTest.UseAll();
+QuantifierTest.UseAny();
+QuantifierTest.UseContains();
+#endregion
+
+#region Aggregations
+AggregationTest.UseAggregate();
+AggregationTest.UseAverage();
+AggregationTest.UseCount();
+AggregationTest.UseMinMax();
+#endregion
+
 
 Console.ReadLine();

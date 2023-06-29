@@ -15,19 +15,20 @@ namespace LinqToturial.Quantifier
         public static void UseAll()
         {
             bool isAllOfStudentAccepted = SampleCollections.Marks.All(m => m.Score > 12);
-            Console.WriteLine($"isAllOfStudentAccepted : {isAllOfStudentAccepted}");
+            Console.WriteLine($"Are all Of student accepted?: {isAllOfStudentAccepted}");
         }
         public static void UseAny()
         {
             bool isExistRejectedStudent = SampleCollections.Marks.Any(m => m.Score < 12);
-            Console.WriteLine($"isExistRejectedStudent: {isExistRejectedStudent}");
+            Console.WriteLine($"Does exist rejected student?: {isExistRejectedStudent}");
         }
         public static void UseContains()
         {
             bool isExistTeacherWithDegreePostdoc = SampleCollections.Teachers.Any(t => t.Educations.Contains(new Education()
             {
                 Title = "postdoc"
-            },new EqucationComparerByTitle()));
+            }, new EqucationComparerByTitle()));
+            Console.WriteLine($"Does exist teacher with degree Postdoc?: {isExistTeacherWithDegreePostdoc}");
         }
     }
 }
