@@ -1,12 +1,8 @@
 ﻿using LinqToturial.Helper;
 using LinqToturial.MockData;
 using LinqToturial.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace LinqToturial.Filtering
 {
@@ -16,7 +12,7 @@ namespace LinqToturial.Filtering
         {
             IEnumerable<Student> students = SampleCollections.Students;
 
-            var tenagerStudents = students.Where(s => s.Age>12 && s.Age<20).ToList();
+            var tenagerStudents = students.Where(s => s.Age > 12 && s.Age < 20).ToList();
             Console.WriteLine("***** TenagerStudents *****");
             SampleCollections.WriteCollection<Student>(tenagerStudents);
 
@@ -25,7 +21,7 @@ namespace LinqToturial.Filtering
         {
             List<int> digits = SampleCollections.DigitsWithDuplicate;
 
-            var eventDigitsWithEvenIdex = digits.Where((d, index) => (d%2==0) && index%2==0).ToList();
+            var eventDigitsWithEvenIdex = digits.Where((d, index) => (d % 2 == 0) && index % 2 == 0).ToList();
 
             Console.WriteLine("*****Event Numbers *****");
             SampleCollections.WriteCollection(eventDigitsWithEvenIdex);
@@ -46,17 +42,17 @@ namespace LinqToturial.Filtering
         {
             IEnumerable<Student> students = SampleCollections.Students;
 
-            if(!string.IsNullOrEmpty(inputFilter.firstName))
-                students=students.Where(s=>s.FirstName.Contains(inputFilter.firstName));
+            if (!string.IsNullOrEmpty(inputFilter.firstName))
+                students = students.Where(s => s.FirstName.Contains(inputFilter.firstName));
 
             if (!string.IsNullOrEmpty(inputFilter.lastName))
-                students=students.Where(s => s.LastName.Contains(inputFilter.lastName));
+                students = students.Where(s => s.LastName.Contains(inputFilter.lastName));
 
             if (!string.IsNullOrEmpty(inputFilter.nationalCode))
-                students=students.Where(s => s.NationalCode.Contains(inputFilter.nationalCode));
+                students = students.Where(s => s.NationalCode.Contains(inputFilter.nationalCode));
 
-            if(inputFilter.age>0)
-                students=students.Where(s => s.Age==inputFilter.age);
+            if (inputFilter.age > 0)
+                students = students.Where(s => s.Age == inputFilter.age);
 
             Console.WriteLine("***** Filtered Students With Lambada *****");
             SampleCollections.WriteCollection(students);
@@ -72,16 +68,16 @@ namespace LinqToturial.Filtering
             IEnumerable<Student> students = SampleCollections.Students;
 
             if (!string.IsNullOrEmpty(inputFilter.firstName))
-                firstNameExp=s => s.FirstName.Contains(inputFilter.firstName);
+                firstNameExp = s => s.FirstName.Contains(inputFilter.firstName);
 
             if (!string.IsNullOrEmpty(inputFilter.lastName))
-                lastNameExp=s => s.LastName.Contains(inputFilter.lastName);
+                lastNameExp = s => s.LastName.Contains(inputFilter.lastName);
 
             if (!string.IsNullOrEmpty(inputFilter.nationalCode))
                 nationCodeExp = s => s.NationalCode.Contains(inputFilter.nationalCode);
 
-            if (inputFilter.age>0)
-                ageExp=s => s.Age==inputFilter.age;
+            if (inputFilter.age > 0)
+                ageExp = s => s.Age == inputFilter.age;
 
 
             Expression<Func<Student, bool>> finalExpression = ExpressionHelper.GenerateExpression(new[]

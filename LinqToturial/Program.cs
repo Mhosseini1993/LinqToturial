@@ -1,9 +1,13 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using LinqToturial.Comparer;
 using LinqToturial.Filtering;
 using LinqToturial.Grouping;
 using LinqToturial.Joining;
 using LinqToturial.Projection;
+using LinqToturial.Quantifier;
 using LinqToturial.Sorting;
+
+QuantifierTest.UseContains();
 
 #region Filtering
 FilteringTest.UseWhere();
@@ -34,6 +38,11 @@ JoiningTest.UseGroupJoin();
 #region Projection
 ProjectionTest.UseSelect();
 ProjectionTest.UseSelectMany();
+#endregion
+
+#region Comparer
+ComparerTest.UseEqualityComparer();
+ComparerTest.UseComparer();
 #endregion
 
 Console.ReadLine();
