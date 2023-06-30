@@ -5,6 +5,7 @@ using LinqToturial.Element;
 using LinqToturial.Filtering;
 using LinqToturial.Grouping;
 using LinqToturial.Joining;
+using LinqToturial.Partitioning;
 using LinqToturial.Projection;
 using LinqToturial.Quantifier;
 using LinqToturial.Sets;
@@ -73,6 +74,11 @@ SetSample.UseDistinct();
 SetSample.UseExcept();
 SetSample.UseIntersect();
 SetSample.UseUnion();
+#endregion
+
+#region Partitioning
+PartitioningSample.UseSkip();
+PartitioningSample.UseTake();
 #endregion
 
 Console.ReadLine();
