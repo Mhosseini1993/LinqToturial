@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LinqToturial.Sorting
 {
-    public class SortingTest
+    public class SortingSample
     {
         public static void UserOrderByAsc()
         {

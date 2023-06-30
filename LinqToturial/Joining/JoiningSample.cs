@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace LinqToturial.Joining
 {
-    public class JoiningTest
+    public class JoiningSample
     {
         public static void UseJoin()
         {

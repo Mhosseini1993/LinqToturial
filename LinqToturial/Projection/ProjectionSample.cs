@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace LinqToturial.Projection
 {
-    public class ProjectionTest
+    public class ProjectionSample
     {
         public static void UseSelect()
         {

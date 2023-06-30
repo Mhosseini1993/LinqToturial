@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace LinqToturial.Filtering
 {
-    public class FilteringTest
+    public class FilteringSample
     {
         public static void UseWhere()
         {

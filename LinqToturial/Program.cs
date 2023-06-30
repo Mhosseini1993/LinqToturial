@@ -1,63 +1,78 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using LinqToturial.Aggregation;
 using LinqToturial.Comparer;
+using LinqToturial.Element;
 using LinqToturial.Filtering;
 using LinqToturial.Grouping;
 using LinqToturial.Joining;
 using LinqToturial.Projection;
 using LinqToturial.Quantifier;
+using LinqToturial.Sets;
 using LinqToturial.Sorting;
 
 
 
 #region Filtering
-FilteringTest.UseWhere();
-FilteringTest.UseWhereWithIndex();
-FilteringTest.UseOfType();
-FilteringTest.SearchWithLambada(new RequestSearchStudentDto("m", string.Empty, string.Empty, 0));
-FilteringTest.SearchWithExpression(new RequestSearchStudentDto("m", string.Empty, string.Empty, 0));
+FilteringSample.UseWhere();
+FilteringSample.UseWhereWithIndex();
+FilteringSample.UseOfType();
+FilteringSample.SearchWithLambada(new RequestSearchStudentDto("m", string.Empty, string.Empty, 0));
+FilteringSample.SearchWithExpression(new RequestSearchStudentDto("m", string.Empty, string.Empty, 0));
 #endregion
 
 #region Sorting
-SortingTest.UserOrderByAsc();
-SortingTest.UserOrderByThenByAsc();
-SortingTest.UserOrderByDesc();
-SortingTest.UserOrderByThenByDesc();
-SortingTest.UseReverse();
+SortingSample.UserOrderByAsc();
+SortingSample.UserOrderByThenByAsc();
+SortingSample.UserOrderByDesc();
+SortingSample.UserOrderByThenByDesc();
+SortingSample.UseReverse();
 #endregion
 
 #region Grouping
-GroupingTest.UseGroupBy();
-GroupingTest.UseLookup();
+GroupingSample.UseGroupBy();
+GroupingSample.UseLookup();
 #endregion
 
 #region Joining
-JoiningTest.UseJoin();
-JoiningTest.UseGroupJoin();
+JoiningSample.UseJoin();
+JoiningSample.UseGroupJoin();
 #endregion
 
 #region Projection
-ProjectionTest.UseSelect();
-ProjectionTest.UseSelectMany();
+ProjectionSample.UseSelect();
+ProjectionSample.UseSelectMany();
 #endregion
 
 #region Comparer
-ComparerTest.UseEqualityComparer();
-ComparerTest.UseComparer();
+ComparerSample.UseEqualityComparer();
+ComparerSample.UseComparer();
 #endregion
 
 #region Quantifier
-QuantifierTest.UseAll();
-QuantifierTest.UseAny();
-QuantifierTest.UseContains();
+QuantifierSample.UseAll();
+QuantifierSample.UseAny();
+QuantifierSample.UseContains();
 #endregion
 
 #region Aggregations
-AggregationTest.UseAggregate();
-AggregationTest.UseAverage();
-AggregationTest.UseCount();
-AggregationTest.UseMinMax();
+AggregationSample.UseAggregate();
+AggregationSample.UseAverage();
+AggregationSample.UseCount();
+AggregationSample.UseMinMax();
 #endregion
 
+#region Element
+ElementSample.UseElementAt();
+ElementSample.UseFirst();
+ElementSample.UseLast();
+ElementSample.UseSingle();
+#endregion
+
+#region Sets
+SetSample.UseDistinct();
+SetSample.UseExcept();
+SetSample.UseIntersect();
+SetSample.UseUnion();
+#endregion
 
 Console.ReadLine();

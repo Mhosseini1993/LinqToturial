@@ -9,9 +9,8 @@ using System.Threading.Tasks;
 
 namespace LinqToturial.Quantifier
 {
-    public class QuantifierTest
+    public class QuantifierSample
     {
-
         public static void UseAll()
         {
             bool isAllOfStudentAccepted = SampleCollections.Marks.All(m => m.Score > 12);

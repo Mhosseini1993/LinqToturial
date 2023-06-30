@@ -257,6 +257,7 @@ namespace LinqToturial.MockData
      
         public static void WriteCollection<T>(IEnumerable<T> collection)
         {
+
             foreach (var item in collection)
             {
                 Console.WriteLine(item);

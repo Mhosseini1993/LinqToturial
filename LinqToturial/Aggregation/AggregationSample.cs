@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace LinqToturial.Aggregation
 {
-    public class AggregationTest
+    public class AggregationSample
     {
         public static void UseAggregate()
         {
@@ -75,6 +75,8 @@ namespace LinqToturial.Aggregation
                                                               .Max();
             Console.WriteLine($"Maximum accepted score : {maximumAcceptedScore}");
 
+
+            
         }
     }
 }

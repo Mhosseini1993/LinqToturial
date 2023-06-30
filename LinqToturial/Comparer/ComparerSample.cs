@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace LinqToturial.Comparer
 {
-    public class ComparerTest
+    public class ComparerSample
     {
         public static void UseEqualityComparer()
         {

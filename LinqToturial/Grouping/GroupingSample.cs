@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace LinqToturial.Grouping
 {
-    public class GroupingTest
+    public class GroupingSample
     {
         /// <summary>
         /// This method is Deferred Execution
