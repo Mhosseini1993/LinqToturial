@@ -1,5 +1,6 @@
 ﻿using LinqToturial.Helper;
 using LinqToturial.Helper.Comparer.MotorComparer;
+using LinqToturial.Helper.Comparer.StringComparer;
 using LinqToturial.MockData;
 using LinqToturial.Models;
 using System;

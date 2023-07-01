@@ -5,9 +5,12 @@ using LinqToturial.Element;
 using LinqToturial.Filtering;
 using LinqToturial.Grouping;
 using LinqToturial.Joining;
+using LinqToturial.MockData;
+using LinqToturial.Models;
 using LinqToturial.Partitioning;
 using LinqToturial.Projection;
 using LinqToturial.Quantifier;
+using LinqToturial.SequenceEqual;
 using LinqToturial.Sets;
 using LinqToturial.Sorting;
 
@@ -80,5 +83,13 @@ SetSample.UseUnion();
 PartitioningSample.UseSkip();
 PartitioningSample.UseTake();
 #endregion
+
+#region SequenceEqual
+SequenceEqualSample.Sample();
+#endregion
+
+
+
+
 
 Console.ReadLine();

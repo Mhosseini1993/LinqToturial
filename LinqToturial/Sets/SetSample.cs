@@ -51,5 +51,11 @@ namespace LinqToturial.Sets
             Console.WriteLine("--------------- MotorSet2 Union MotorSet --------------");
             SampleCollections.WriteCollection(motorUnionResult);
         }
+        public static void UseConcat()
+        {
+            IEnumerable<string> concatNumbers = SampleCollections.Numbers.Concat<string>(SampleCollections.Numbers2);
+            Console.WriteLine("----------------------- Numebr Concat with Number2 ---------------");
+            SampleCollections.WriteCollection<string>(concatNumbers);
+        }
     }
 }
